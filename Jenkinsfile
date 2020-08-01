@@ -3,9 +3,13 @@ agent any
 stages {
     stage('Preperation') { 
      steps{
-         export MAVEN_HOME=/opt/maven
-         sh "mvn -f /opt/maven"
-        sh "mvn clean"
+         withMaven(
+        // Maven installation declared in the Jenkins "Global Tool Configuration"
+        maven: 'MAVEN_HOME',
+        
+      sh "mvn clean"
+
+    } 
      }
        
     }
