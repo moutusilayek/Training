@@ -4,7 +4,7 @@ stages {
     stage('Preperation') { 
      steps{
          export MAVEN_HOME=/opt/maven
-         
+         sh "mvn -f /opt/maven"
         sh "mvn clean"
      }
        
