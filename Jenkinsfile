@@ -5,9 +5,9 @@ stages {
      steps{
          withMaven(
         // Maven installation declared in the Jenkins "Global Tool Configuration"
-        maven: 'MAVEN_HOME',
+          maven: 'MAVEN_HOME'
         
-      sh "mvn clean"
+         sh "mvn clean"
 
     } 
      }
