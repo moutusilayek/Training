@@ -3,18 +3,18 @@ agent any
 stages {
     stage('Preperation') { 
      steps{
-        bat "mvn clean"
+        sh "mvn clean"
      }
        
     }
     stage('Build') { 
     steps{
-        bat "mvn test"
+        sh "mvn test"
         }
     }
     stage('Package') { 
     steps{
-        bat "mvn package"
+        sh "mvn package"
         }
     }
 }
